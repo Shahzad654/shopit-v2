@@ -106,7 +106,7 @@ const PaymentMethod = () => {
                 Cash on Delivery
               </label>
             </div>
-            <div className="form-check">
+            {/* <div className="form-check">
               <input
                 className="form-check-input"
                 type="radio"
@@ -118,7 +118,7 @@ const PaymentMethod = () => {
               <label className="form-check-label" htmlFor="cardradio">
                 Card - VISA, MasterCard
               </label>
-            </div>
+            </div> */}
 
             <button
               id="shipping_btn"
