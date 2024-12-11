@@ -14,9 +14,18 @@ const Header = () => {
   const { user } = useSelector((state) => state.auth);
   const { cartItems } = useSelector((state) => state.cart);
 
-  const logoutHandler = () => {
-    logout();
-    navigate(0);
+  // const logoutHandler = () => {
+  //   logout();
+  //   navigate(0);
+  // };
+  const logoutHandler = async () => {
+    try {
+      const response = await logout().unwrap();
+      console.log(response.message);
+      navigate(0);
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
   };
 
   return (
