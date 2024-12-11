@@ -11,7 +11,7 @@ import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const PaymentMethod = () => {
-  const [method, setMethod] = useState("");
+  const [method, setMethod] = useState("COD");
 
   const navigate = useNavigate();
 
@@ -101,6 +101,7 @@ const PaymentMethod = () => {
                 id="codradio"
                 value="COD"
                 onChange={(e) => setMethod("COD")}
+                defaultChecked
               />
               <label className="form-check-label" htmlFor="codradio">
                 Cash on Delivery
